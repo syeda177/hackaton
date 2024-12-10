@@ -3,11 +3,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { IoMdContact } from "react-icons/io";
-import { FaSearch } from "react-icons/fa";
+import { IoSearchOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
-import { IoMdCart } from "react-icons/io";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdSend } from "react-icons/md";
 import Link from 'next/link'
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
 
 const HeroSection = () => {
   const [quantity, setQuantity] = useState(1);
@@ -51,14 +54,15 @@ const HeroSection = () => {
         <IoMdContact className="w-6 h-6 text-black" />
       </button>
       <button aria-label="Search">
-        <FaSearch className="w-6 h-6 text-black" />
+        <IoSearchOutline className="w-6 h-6 text-black" />
       </button>
+      <Link href='/compare'>
       <button aria-label="Wishlist">
-        <FaRegHeart className="w-6 h-6 text-black" />
-      </button>
-      <button aria-label="Cart">
-        <IoMdCart className="w-6 h-6 text-black" />
-      </button>
+        <FaRegHeart className="w-6 h-6 mt-2 text-black" />
+      </button></Link>
+      <Link href={"/cart"}><button aria-label="Cart">
+      <AiOutlineShoppingCart className="w-6 h-6 mt-2 text-black" />
+      </button></Link>
     </div>
   </div> 
    <div>     
@@ -189,6 +193,11 @@ const HeroSection = () => {
               <p>SKU: SS001</p>
               <p className="mt-3">Category : Sofas</p>
               <p className="mt-3">Tags: Sofa, Chair, Home, Shop</p>
+              <p className="flex gap-4 mt-3">Share:
+              <FaFacebook className="mt-1 text-black"/>
+              <FaLinkedin className="mt-1 text-black"/>
+              <FaTwitter className="mt-1 text-black"/>
+              </p>
             </div>
           </div>
         </div>
@@ -251,10 +260,6 @@ const HeroSection = () => {
     </div>
   );
 };
-
-
-
-
 
 
 const DescriptionComponent = () => {

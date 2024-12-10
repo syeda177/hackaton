@@ -15,27 +15,34 @@ const Room = () => {
         />
       </div>
 
-      {/* Second Image */}
-      <div>
-        <Image 
-          src='/images/image.png' 
-          alt='' 
-          width={300} 
-          height={100} 
-          className='-mt-12 sm:-mt-24 md:-mt-36 lg:-mt-52 ml-4 sm:ml-20 md:ml-[300px] lg:ml-[600px]'
-        />
-      </div>
+      <div className="w-full h-auto mt-4">
 
-      {/* Third Image */}
-      <div>
-        <Image 
-          src='/images/Rectangle 25.png' 
-          alt='' 
-          width={300} 
-          height={100} 
-          className='ml-4 sm:ml-20 md:ml-[200px] lg:ml-[1000px] -mt-[300px] sm:-mt-[350px] md:-mt-[400px]'
-        />
-      </div>
+  {/* Second and Third Images */}
+  <div className="flex flex-wrap justify-center gap-4 lg:gap-14 mt-8">
+    {/* Second Image */}
+    <div className="w-full sm:w-auto flex justify-center">
+      <Image 
+        src="/images/image.png" 
+        alt="" 
+        width={300} 
+        height={100} 
+        className="object-contain"
+      />
+    </div>
+
+    {/* Third Image */}
+    <div className="w-full sm:w-auto flex justify-center">
+      <Image 
+        src="/images/Rectangle 25.png" 
+        alt="" 
+        width={300} 
+        height={100} 
+        className="object-contain"
+      />
+    </div>
+  </div>
+</div>
+
     </div>
   )
 }
